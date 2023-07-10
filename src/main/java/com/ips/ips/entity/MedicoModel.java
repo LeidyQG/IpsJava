@@ -82,11 +82,11 @@ public class MedicoModel {
     }
 
     public EspecialidadModel getEspecialidad() {
-    return especialidad;
+        return especialidad;
     }
 
     public void setEspecialidad(EspecialidadModel especialidad) {
-    this.especialidad = especialidad;
+        this.especialidad = especialidad;
     } 
 
     public List<CitaModel> getCitas() {

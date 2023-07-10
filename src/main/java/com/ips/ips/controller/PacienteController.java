@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ips.ips.entity.PacienteModel;
 import com.ips.ips.service.PacienteService;
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {
@@ -27,7 +28,7 @@ public class PacienteController {
         return pacienteService.obtenerPacientes();
     }
 
-    @PostMapping()
+    @PostMapping(path = "/crear_paciente")
     public PacienteModel guardarPaciente(@RequestBody PacienteModel paciente){
         return this.pacienteService.guardarPaciente(paciente);
     }
